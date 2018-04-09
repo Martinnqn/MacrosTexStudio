@@ -12,5 +12,5 @@ donde idMacro es un entero que comienza en cero.
 nombreMacro es el nombre de la macro
 Luego del nombre va el contenido de la macro, comenzando con la palabra SCRIPT. 
 Por último va una abreviación para la macro.
-Ejemplo
+Ejemplo:
 Macros\0=ejecutar pull, "%SCRIPT \n str = \"Esta por ejecutar el comando pull en \"+editor.fileName()+\" \xbfSeguro?\";\n var res = confirm(str); \n if (res) { \n buildManager.runCommand(\"git pull\", editor.fileName()); \n } \n ", pull
