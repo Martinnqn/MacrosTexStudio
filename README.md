@@ -16,3 +16,6 @@ Por último va una abreviación para la macro.
 Ejemplo:
 
 Macros\0=ejecutar pull, "%SCRIPT \n str = \"Esta por ejecutar el comando pull en \"+editor.fileName()+\" \xbfSeguro?\";\n var res = confirm(str); \n if (res) { \n buildManager.runCommand(\"git pull\", editor.fileName()); \n } \n ", pull
+
+
+También se pueden editar las macros desde la interfaz gráfica de TexStudio, en la pestaña Macros->Editar Macros...
