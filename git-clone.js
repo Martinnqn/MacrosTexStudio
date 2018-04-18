@@ -11,7 +11,7 @@ if (dialog.exec()!=0){
 		if (res) {
 			app.fileNew();
 			newEditor = documentManager.currentDocument.editorView.editor;
-			buildManager.runCommand('git clone \"'+repo+'\" \"'+dest+'\"', editor.fileName()); 
+			buildManager.runCommand('git clone \"'+repo+'\" \"'+dest+'\"', newEditor.fileName()); 
 		}   
 	}else{
 		str = "Debe completar todos los campos";
