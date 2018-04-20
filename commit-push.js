@@ -10,9 +10,9 @@ if (choisedialog.exec() != 0) {
 		if (dialog.exec() != 0) {
 			comment = dialog.get("comment");
 			if ((dialog.get("allfiles")) == true){
-				buildManager.runCommand("git commit -a -m \"" + comment + "\"", editor.fileName());
+				buildManager.runCommand('git commit -a -m \"' + comment + '\"', editor.fileName());
 			}else{
-				buildManager.runCommand("git commit " + editor.fileName() + " -m \"" + comment + "\"", editor.fileName());
+				buildManager.runCommand('git commit \"' + editor.fileName() + '\" -m \"' + comment + '\"', editor.fileName());
 			}
 		}
 	} else if (choisedialog.get("choiseGIT") == "Commit with Push") {
@@ -25,11 +25,11 @@ if (choisedialog.exec() != 0) {
 			comment = dialog.get("comment");
 			branch = dialog.get("branch");
 			if ((dialog.get("allfiles")) == true){
-				buildManager.runCommand("git commit -a -m \"" + comment + "\"", editor.fileName());
+				buildManager.runCommand('git commit -a -m \"' + comment + '\"', editor.fileName());
 			}else{
-				buildManager.runCommand("git commit " + editor.fileName() + " -m \"" + comment + "\"", editor.fileName());
+				buildManager.runCommand('git commit \"' + editor.fileName() + '\" -m \"' + comment + '\"', editor.fileName());
 			}
-			buildManager.runCommand("git push origin \"" + branch +"\"", editor.fileName());
+			buildManager.runCommand('git push origin \"' + branch +'\"', editor.fileName());
 		}
 	}
 }
